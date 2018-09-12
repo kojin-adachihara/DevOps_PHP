@@ -22,7 +22,6 @@ class Arithmetic_test extends PHPUnit_Framework_TestCase {
         $this->assertEquals(8, $this->object->add(3, 5));
         // 引数に15,30を渡すと45が返ってくることを確認する
         $this->assertEquals(45, $this->object->add(15, 30));
-        $this->assertEquals(0, $this->object->add(15, 30));
     }
 
     /**
