@@ -27,4 +27,4 @@ jobs:
       # - run: find ./ -type f -name phpunit
 
       # テストケースを指定する
-      - run: phpunit [file name]
+      - run: ./vendor/phpunit/phpunit/phpunit Arithmetic_test.php
