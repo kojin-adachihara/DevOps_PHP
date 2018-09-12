@@ -1,0 +1,23 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/php:7.2-apache-node-browsers-legacy
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+
+      - run: composer install --dev
+
+      # run tests!
+      # - run: ls -lah
+      # - run: find ./ -type f -name phpunit
+      - run: ./vendor/phpunit/phpunit/phpunit Arithmetic_test.php
