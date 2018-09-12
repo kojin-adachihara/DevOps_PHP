@@ -2,22 +2,29 @@
 #
 # Check https://circleci.com/docs/2.0/language-php/ for more details
 #
+
+# CircleCIはバージョン2.0から記述が変わったため、"version"を指定しないとエラーになる
 version: 2
 jobs:
   build:
     docker:
       # specify the version you desire here
+      # Docker Hub(https://hub.docker.com/r/circleci/php/tags/)からイメージを指定
       - image: circleci/php:7.2-apache-node-browsers-legacy
 
+    # ビルドを行うパスを指定(変更しなくてok)
     working_directory: ~/repo
 
     steps:
       - checkout
 
-
+      # phpunitがインストールされてないので、composerを使ってインストールする
       - run: composer install --dev
 
       # run tests!
-      # - run: ls -lah
+
+      # コメントアウトをはずせば、phpunitのパスがビルド結果で表示される
       # - run: find ./ -type f -name phpunit
-      - run: ./vendor/phpunit/phpunit/phpunit Arithmetic_test.php
+
+      # テストケースを指定する
+      - run: phpunit [file name]
