@@ -8,7 +8,7 @@ class Arithmetic
      * 足し算
      */
     public function add($x, $y) {
-        return($x + $y);
+        return($x * $y);
     }
 
     /**
