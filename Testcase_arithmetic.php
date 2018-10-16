@@ -18,6 +18,7 @@ class Testcase_arithmetic extends PHPUnit_Framework_TestCase {
     public function testcase_add() {
         // 引数に3,5を渡すと8が返ってくることを確認する
         $this->assertEquals(8, $this->object->add(3, 5));
+        echo ('add関数は正常です!');
     }
 
     /**
@@ -26,7 +27,7 @@ class Testcase_arithmetic extends PHPUnit_Framework_TestCase {
     public function testsubtract() {
         // 引数に5,2を渡すと3が返ってくることを確認する
         $this->assertEquals(3, $this->object->subtract(5, 2));
-        echo 'pass!';
+        echo ('subtract関数は正常です!');
     }
 
 }
