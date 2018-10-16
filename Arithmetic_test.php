@@ -41,6 +41,8 @@ class Arithmetic_test extends PHPUnit_Framework_TestCase {
         $this->assertEquals(24, $this->object->multiply(4, 6));
         // 引数に4,-5を渡すと-20が返ってくることを確認する
         $this->assertEquals(-20, $this->object->multiply(4, -5));
+        // 失敗させる
+        $this->assertEquals(-0, $this->object->multiply(4, -5));
     }
 
     /**
