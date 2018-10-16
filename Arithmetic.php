@@ -17,18 +17,4 @@ class Arithmetic
     public function subtract($x, $y) {
         return($x - $y);
     }
-
-    /**
-     * 掛け算
-     */
-    public function multiply($x, $y) {
-        return($x * $y);
-    }
-
-    /**
-     * 割り算
-     */
-    public function divide($x, $y) {
-        return($x / $y);
-    }
 }
