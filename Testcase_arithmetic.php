@@ -25,7 +25,9 @@ class Testcase_arithmetic extends PHPUnit_Framework_TestCase {
      */
     public function testsubtract() {
         // 引数に5,2を渡すと3が返ってくることを確認する
-        $this->assertEquals(3, $this->object->subtract(5, 2));
+        if($this->assertEquals(3, $this->object->subtract(5, 2))) {
+            echo ('pass');
+        }
     }
 
 }
